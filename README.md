@@ -57,5 +57,23 @@ Una vez generado, se puede descargar el plan en formato .txt o .pdf.
 Consideraciones Finales  
 Este proyecto demuestra cómo integrar una interfaz simple desarrollada con Streamlit con modelos de lenguaje de OpenAI para automatizar tareas clínicas. Ofrece una base sólida para construir herramientas de asistencia terapéutica basadas en IA, priorizando la accesibilidad y personalización de las intervenciones.
 
+Despliegue en la Nube con Streamlit  
+Esta aplicación puede desplegarse en la nube utilizando Streamlit Cloud, lo que permite acceder a la app desde cualquier navegador sin necesidad de ejecutarla localmente.
+
+Pasos para el despliegue:
+
+1. Subí tu repositorio a GitHub.
+2. Ingresá a https://streamlit.io/cloud y seleccioná "New app".
+3. Elegí el repositorio y archivo `app.py` como archivo principal de ejecución.
+4. En la configuración, cargá tu clave de OpenAI en la sección “Secrets” con el siguiente formato (respetá las comillas dobles):
+
+   OPENAI_API_KEY = "sk-..."
+
+5. Hacé clic en Deploy.
+
+Una vez desplegada, tu aplicación estará disponible en una URL pública como:
+
+https://tu-app.streamlit.app
+
 Contacto  
 Autor: Maximiliano Sastre Bocalon
