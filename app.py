@@ -22,6 +22,20 @@ st.markdown("""
 para niños con TEA, TGD u otras dificultades comunicacionales usando inteligencia artificial.
 """)
 
+# Sección "Como funciona"
+st.header("¿Cómo funciona esta aplicación?")
+st.markdown("""
+Esta aplicación está diseñada para ayudar a terapeutas a generar planes de actividades terapéuticas personalizadas utilizando inteligencia artificial.
+
+**Pasos para usarla:**
+
+1. **Ingresá el perfil del paciente**: Escribe una breve descripción del paciente, incluyendo su edad, diagnóstico y cualquier otro detalle relevante.
+2. **Haz clic en "Generar plan terapéutico"**: La app procesará la información y generará un plan basado en el perfil proporcionado.
+3. **Descargá el plan**: Podrás descargar el plan generado en formato `.txt` o `.pdf` para utilizarlo en la sesión.
+
+La app utiliza **OpenAI** para generar los planes de manera eficiente y consistente, basándose en el perfil del paciente proporcionado.
+""")
+
 # Input: perfil del paciente
 
 profile = st.text_area("Describí brevemente al paciente:",
@@ -52,10 +66,8 @@ Perfil del paciente: {profile}
                         {"role": "system", "content": "Sos un asistente especializado en terapia infantil."},
                         {"role": "user", "content": prompt}
                     ],
-
                 temperature=0.2,
                 max_tokens=800
-                
                 )
 
                 # Mostrar el resultado en pantalla
